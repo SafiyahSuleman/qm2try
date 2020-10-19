@@ -1,0 +1,69 @@
+<section id="three" class="wrapper style1 fade-up">
+	<div class="inner">
+		<h2>Get in touch</h2>
+		<p>{{ site.contactTagline }}</p>
+		<div class="split style1">
+			<section>
+				<form method="post" action="https://formspree.io/{{ site.email }}">
+					<div class="field half first">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="field half">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="5"></textarea>
+					</div>
+					<ul class="actions">
+						<li><a href="" class="button submit">Send Message</a></li>
+					</ul>
+				</form>
+			</section>
+			<section>
+				<ul class="contact">
+					{% if site.address %}
+					<li>
+						<h3>Address</h3>
+						<span>{{ site.address }}</span>
+					</li>
+					{% endif %}
+					{% if site.email %}
+					<li>
+						<h3>Email</h3>
+						<a href="mailto:{{ site.email }}">{{ site.email }}</a>
+					</li>
+					{% endif %}
+					{% if site.phone %}
+					<li>
+						<h3>Phone</h3>
+						<a href="tel:{{ site.phone }}">{{ site.phone }}</a>
+					</li>
+					{% endif %}
+					<li>
+						<h3>Social</h3>
+						<ul class="icons">
+							{% if site.twitter %}
+							<li><a href="https://twitter.com/{{ site.twitter }}" class="fa-twitter"><span class="label">Twitter</span></a></li>
+							{% endif %}
+							{% if site.facebook %}
+							<li><a href="https://www.facebook.com/{{ site.facebook }}" class="fa-facebook"><span class="label">Facebook</span></a></li>
+							{% endif %}
+							{% if site.github %}
+							<li><a href="https://github.com/{{ site.github }}" class="fa-github"><span class="label">GitHub</span></a></li>
+							{% endif %}
+							{% if site.instagram %}
+							<li><a href="https://www.instagram.com/{{ site.instagram }}" class="fa-instagram"><span class="label">Instagram</span></a></li>
+							{% endif %}
+							{% if site.linkedin %}
+							<li><a href="https://www.linkedin.com/in/{{ site.linkedin }}" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							{% endif %}
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+</section>
